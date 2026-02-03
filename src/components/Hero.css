@@ -107,3 +107,32 @@
   transition: transform 0.2s;
 }
 .resume-btn:hover { transform: scale(1.05); }
+/* --- MOBILE RESPONSIVENESS FIX --- */
+@media screen and (max-width: 768px) {
+  /* 1. Shrink the main title text */
+  .hero-title {
+    font-size: 2.5rem !important; /* Force smaller size */
+    line-height: 1.2;
+    padding: 0 10px; /* Add safety space on sides */
+    word-wrap: break-word; /* Ensure long words wrap */
+  }
+
+  /* 2. Adjust the Name highlight specifically */
+  .hero-title .highlight {
+    display: block; /* Puts name on its own line */
+    font-size: 2.8rem; /* Name slightly bigger than "Hi, I'm" */
+    margin-top: 0.5rem;
+  }
+
+  /* 3. Fix the role text size */
+  .hero-role {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* 4. Ensure container doesn't overflow */
+  .hero-content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
