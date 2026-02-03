@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Paralyzed Patient Monitoring",
+    "description": "– Developed a smart assistive communication system for paralyzed patients– Implemented eye-blink based communication using computer vision– Enabled wireless transmission of alerts to caregivers",
+    "techStack": ["Computer Vision", "Iot"],
+    "githubUrl": "https://github.com/sangumalakappanavar/Paralyzed-Patient-Monitoring-",
+    "liveUrl": null
+  },
+  {
+    "id": 2,
+    "title": "Context-Resume RAG Chatbot",
+    "description": "– Developed a Retrieval-Augmented Generation (RAG) based resume chatbot– Automated resume ingestion and indexing using n8n workflows– Enabled context-aware question answering using vector searc",
+    "techStack": ["Gimini LLM", "n8n", "Vector Search"],
+    "githubUrl": "https://github.com/sangumalakappanavar/Context-Resume-Chatbot",
+    "liveUrl": null
+  }
+]

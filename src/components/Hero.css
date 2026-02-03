@@ -1,0 +1,109 @@
+/* src/components/Hero.css */
+.hero-container {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  background-color: #020b04; /* Very dark green-black base */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  margin-top: 0; /* Reset margin since Navbar sits on top */
+}
+
+/* THE ANIMATED GRID */
+.hero-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* The Grid Pattern */
+  background-image: 
+    linear-gradient(rgba(0, 50, 0, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 50, 0, 0.5) 1px, transparent 1px);
+  background-size: 50px 50px; /* Size of grid squares */
+  
+  /* The Animation: Moves the background downwards */
+  animation: gridScroll 4s linear infinite;
+  
+  /* Vignette (Fade edges to black) */
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  z-index: 1;
+}
+
+/* DEFINE THE MOTION */
+@keyframes gridScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 50px; } /* Matches background-size to look seamless */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+}
+
+.highlight {
+  color: #00ff41; /* classic hacker green */
+  text-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.hero-role {
+  font-size: 1.5rem;
+  color: #8fbc8f; /* Dark sea green */
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace; /* Monospace for coding feel */
+}
+
+/* Re-adding button styles just in case */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.social-btn {
+  background: rgba(0, 20, 0, 0.6);
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn:hover {
+  background: #00ff41;
+  color: black;
+  box-shadow: 0 0 15px #00ff41;
+}
+
+.resume-btn {
+  background: #e0e0e0;
+  color: black;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.resume-btn:hover { transform: scale(1.05); }

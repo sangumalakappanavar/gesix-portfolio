@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(2, 11, 4, 0.85); /* Semi-transparent dark green */
+  backdrop-filter: blur(10px); /* Glass effect */
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.nav-logo {
+  color: white;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ff41; /* Green highlight on hover */
+}
+
+/* Mobile check */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden on mobile for now (simple version) */
+  }
+}

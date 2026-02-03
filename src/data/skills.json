@@ -1,0 +1,13 @@
+{
+  "proficient": [
+    { "name": "Java", "icon": "c-logo.png" },
+    { "name": "Gimini LLM", "icon": "verilog.png" },
+    { "name": "Python", "icon": "python.png" },
+    { "name": "MySQL", "icon": "arm.png" }
+  ],
+  "familiar": [
+    { "name": "React.js", "icon": "react.png" },
+    { "name": "JavaScript", "icon": "matlab.png" },
+    { "name": "HTML&CSS", "icon": "tcl.png" }
+  ]
+}
