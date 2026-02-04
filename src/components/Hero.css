@@ -106,35 +106,35 @@
   transition: transform 0.2s;
 }
 .resume-btn:hover { transform: scale(1.05); }
-
-/* --- STRONG MOBILE FIX --- */
+/* --- FINAL MOBILE FIX --- */
+/* --- FINAL MOBILE FIX --- */
 @media screen and (max-width: 768px) {
   .hero-container {
     padding: 0 1rem;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 120px; /* Space for the stacked navbar */
   }
 
-  /* 1. Dynamic Text Sizing */
   .hero-title {
-    font-size: 8vw !important; /* Fits to width */
+    font-size: 8vw !important; 
     line-height: 1.1;
-    word-wrap: break-word;
   }
 
+  /* YOUR NAME - Set to 6vw so it fits on screen */
   .hero-title .highlight {
     display: block;
-    font-size: 10vw !important; /* Fits name to width */
-    margin-top: 10px;
+    font-size: 6vw !important; 
+    margin-top: 5px;
     color: #00ff41;
-    word-break: break-word; 
-    hyphens: auto;
+    word-wrap: break-word;
   }
 
   .hero-role {
     font-size: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
-
-  /* 2. Fix Social Buttons spacing on mobile */
+  
   .social-links {
     flex-wrap: wrap;
     gap: 1rem;

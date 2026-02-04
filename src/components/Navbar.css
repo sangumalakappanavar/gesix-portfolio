@@ -1,15 +1,18 @@
+/* src/components/Navbar.css */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1.2rem 3rem;
+  /* REDUCED PADDING: 3rem -> 1.5rem to give more space for text */
+  padding: 1rem 1.5rem; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(2, 11, 4, 0.85); /* Semi-transparent dark green */
-  backdrop-filter: blur(10px); /* Glass effect */
+  background: rgba(2, 11, 4, 0.85);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+  box-sizing: border-box; /* Ensures padding doesn't widen the screen */
 }
 
 .nav-logo {
@@ -20,29 +23,52 @@
   border: 2px solid white;
   padding: 5px 10px;
   border-radius: 50%;
+  flex-shrink: 0; /* Prevents logo from getting squished */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  /* REDUCED GAP: 2rem -> 1rem so links sit closer together */
+  gap: 1rem; 
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   color: #a0aec0;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem; /* Slightly smaller text if needed */
   font-weight: 500;
   transition: color 0.3s;
+  white-space: nowrap; /* Prevents text from wrapping awkwardly */
 }
 
 .nav-links a:hover {
-  color: #00ff41; /* Green highlight on hover */
+  color: #00ff41;
 }
 
-/* Mobile check */
-@media (max-width: 768px) {
+/* --- MOBILE LAYOUT FIX --- */
+/* Changed breakpoint to 950px to switch to mobile view sooner on laptops */
+@media screen and (max-width: 950px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0;
+    height: auto;
+  }
+
   .nav-links {
-    display: none; /* Hidden on mobile for now (simple version) */
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1rem;
   }
 }
