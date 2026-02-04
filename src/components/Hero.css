@@ -9,7 +9,7 @@
   align-items: center;
   overflow: hidden;
   color: white;
-  margin-top: 0; /* Reset margin since Navbar sits on top */
+  margin-top: 0;
 }
 
 /* THE ANIMATED GRID */
@@ -38,7 +38,7 @@
 /* DEFINE THE MOTION */
 @keyframes gridScroll {
   0% { background-position: 0 0; }
-  100% { background-position: 0 50px; } /* Matches background-size to look seamless */
+  100% { background-position: 0 50px; }
 }
 
 .hero-content {
@@ -64,10 +64,9 @@
   font-size: 1.5rem;
   color: #8fbc8f; /* Dark sea green */
   margin-bottom: 2rem;
-  font-family: 'Courier New', monospace; /* Monospace for coding feel */
+  font-family: 'Courier New', monospace;
 }
 
-/* Re-adding button styles just in case */
 .social-links {
   display: flex;
   gap: 1.5rem;
@@ -107,32 +106,37 @@
   transition: transform 0.2s;
 }
 .resume-btn:hover { transform: scale(1.05); }
-/* --- MOBILE RESPONSIVENESS FIX --- */
+
+/* --- STRONG MOBILE FIX --- */
 @media screen and (max-width: 768px) {
-  /* 1. Shrink the main title text */
+  .hero-container {
+    padding: 0 1rem;
+  }
+
+  /* 1. Dynamic Text Sizing */
   .hero-title {
-    font-size: 2.5rem !important; /* Force smaller size */
-    line-height: 1.2;
-    padding: 0 10px; /* Add safety space on sides */
-    word-wrap: break-word; /* Ensure long words wrap */
+    font-size: 8vw !important; /* Fits to width */
+    line-height: 1.1;
+    word-wrap: break-word;
   }
 
-  /* 2. Adjust the Name highlight specifically */
   .hero-title .highlight {
-    display: block; /* Puts name on its own line */
-    font-size: 2.8rem; /* Name slightly bigger than "Hi, I'm" */
-    margin-top: 0.5rem;
+    display: block;
+    font-size: 10vw !important; /* Fits name to width */
+    margin-top: 10px;
+    color: #00ff41;
+    word-break: break-word; 
+    hyphens: auto;
   }
 
-  /* 3. Fix the role text size */
   .hero-role {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
-  
-  /* 4. Ensure container doesn't overflow */
-  .hero-content {
-    width: 100%;
-    overflow-x: hidden;
+
+  /* 2. Fix Social Buttons spacing on mobile */
+  .social-links {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
